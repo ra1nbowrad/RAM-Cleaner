@@ -1,2 +1,2 @@
-# RAM-Cleaner
-Lightweight RAM cleaner with real-time usage display
+## License
+This project is NOT open source. All rights reserved.
