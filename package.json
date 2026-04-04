@@ -1,0 +1,54 @@
+{
+  "name": "ram-cleaner",
+  "version": "1.0.0",
+  "description": "RAM Cleaner",
+  "main": "main.js",
+  "build": {
+    "appId": "com.youri.ramcleaner",
+    "productName": "RAM Cleaner",
+    "asar": true,
+    "npmRebuild": false,
+    "icon": "assets/icon.ico",
+    "files": [
+      "dist/**",
+      "assets/**",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "extraResources": [
+      { "from": "scripts", "to": "scripts" },
+      { "from": "EmptyStandbyList.exe", "to": "EmptyStandbyList.exe", "filter": ["**/*"] }
+    ],
+    "directories": { "output": "release" },
+    "win": {
+      "target": ["nsis"],
+      "icon": "assets/icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    }
+  },
+  "scripts": {
+    "dev:renderer": "vite --configLoader native",
+    "build": "vite build --configLoader native",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist:win": "npm run build && electron-builder --win nsis"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "node-os-utils": "^2.0.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "vite": "^8.0.3"
+  },
+  "devDependencies": {
+    "electron": "^41.1.1",
+    "electron-builder": "^26.8.1"
+  }
+}
