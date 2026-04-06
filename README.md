@@ -13,3 +13,6 @@ FEATURES: Clear cache, Auto-clear when cached >, Start on boot, Usage view, Proc
 
 <img width="544" height="422" alt="grafik" src="https://github.com/user-attachments/assets/c44ab8c9-7cb8-4c90-a0fe-7b7e5036f8d1" />
 
+
+Support me♥️: https://buymeacoffee.com/rainbowrad
+
